@@ -140,13 +140,16 @@ class War_Game:
         # Assumes hands are empty
         self.deck.shuffle()
         counter = 0
+	total_cards_dealt = 0 #created a variable to keep track of the cards dealt 
         while(self.players[0].get_hand_size() < 26):
             for player in self.players:
                 player.add_card_hand(self.deck.deal())
                 counter += 1
+		total_cards_dealt += 1 #increment the cards_dealt
                 if counter == 52:
                     self.deck.shuffle()
                     counter = 0
+	print(f"Total cards dealt: {total_cards_dealt}") #prints the total amount of cards dealt 
 
     def initialize_game(self):
         for player in self.players:
