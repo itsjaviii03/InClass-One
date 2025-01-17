@@ -84,7 +84,8 @@ class Deck:
     def shuffle(self):
         self.counter = 0
         for i in range(7):
-            random.shuffle(self.deck)
+        	random.shuffle(self.deck)
+		print(f"Top card after shuffling: {self.deck[0]}") #prints the top card after shuffling 
 
     # tostring method for deck class.
     # Prints out all 52 cards in the deck, one per line.
