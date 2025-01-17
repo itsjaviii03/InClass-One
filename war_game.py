@@ -162,6 +162,8 @@ class War_Game:
         winner = cards.index(max(cards))
         self.players[winner].add_card_discard(cards)
 
+	print(f"{self.players[winner].get_name()} wins this round!") #prints the winner of the round
+
     def game_won(self):
         result = -1
         for i in range(len(self.players)):
