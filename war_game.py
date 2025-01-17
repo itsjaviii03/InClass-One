@@ -162,6 +162,13 @@ class War_Game:
         winner = cards.index(max(cards))
         self.players[winner].add_card_discard(cards)
 
+	#Updates the winner score and prints the scoreboard 
+	self.players[winner].add_win()
+	print("Current Scoreboard:")
+	    
+	for player in self.players:
+		print(f"{player.get_name()}: {player.record[0]} wins")
+
     def game_won(self):
         result = -1
         for i in range(len(self.players)):
