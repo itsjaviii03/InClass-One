@@ -84,7 +84,8 @@ class Deck:
     def shuffle(self):
         self.counter = 0
         for i in range(7):
-            random.shuffle(self.deck)
+        	random.shuffle(self.deck)
+		print(f"Shuffle iteration {i + 1} completed") #prints the number of times shuffled(7)
 
     # tostring method for deck class.
     # Prints out all 52 cards in the deck, one per line.
