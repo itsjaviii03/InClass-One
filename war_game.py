@@ -222,8 +222,12 @@ class War_Player:
         self.hand = []
         self.discard = []
 
+#Changing the play_card method for change_one
     def play_card(self):
-        return self.hand.pop()
+        cards_played = self.hand.pop()
+	print(f"{self.myname} is playing: {card_played}") #printing the player who is currently playing a card
+	print(f"Cards remaining in hand: {len(self.hand)}") #printing the number of cards remaining 
+	return cards_played
 
     def get_hand_size(self):
         return len(self.hand)
